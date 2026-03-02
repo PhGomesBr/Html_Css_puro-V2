@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./ASSETS/Fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Fugaz One';
+  src: url('./ASSETS/Fonts/Fugaz_One/FugazOne-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ABeeZee';
+  src: url('./ASSETS/Fonts/ABeeZee/ABeeZee-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ABeeZee';
+  src: url('./ASSETS/Fonts/ABeeZee/ABeeZee-Italic.ttf') format('truetype');
+  font-style: italic;
+}
+
+body{
+    background-color: #13141a;
+}
+.cabecalho{margin-top: 20px;
+    margin-left: 25vh;
+    margin-right: 25vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    height: 70px;
+    font-family: 'Fugaz_One';
+}
+.menu-burger{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    cursor: pointer;
+}
+.menu-burger div{
+    width: 7vh;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+.separar{
+    margin-top: 20px;
+    border: 3px solid #ffff;
+}
