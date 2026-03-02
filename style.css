@@ -23,6 +23,7 @@
 body{
     background-color: #13141a;
 }
+/* cabeçalho & menu amburguer */
 .cabecalho{margin-top: 20px;
     margin-left: 25vh;
     margin-right: 25vh;
@@ -40,13 +41,28 @@ body{
     gap: 15px;
     cursor: pointer;
 }
+.separar{
+    width: auto;
+    margin-top: 20px;
+    border: 3px solid #ffff;
+}
+/*menu X*/
+#menu-toggle {/*esconde a checbox*/
+    display: none;
+}
 .menu-burger div{
     width: 7vh;
     height: 3px;
     background-color: white;
     transition: 0.3s;
 }
-.separar{
-    margin-top: 20px;
-    border: 3px solid #ffff;
+/*faz a aniumação do X*/
+#menu-toggle:checked + .menu-burger .bar1 {
+    transform: rotate(-45deg) translate(-20px, 20px);
+}
+#menu-toggle:checked + .menu-burger .bar2 {
+    opacity: 0;
+}
+#menu-toggle:checked + .menu-burger .bar3 {
+    transform: rotate(45deg) translate(-6px, -6px);
 }
