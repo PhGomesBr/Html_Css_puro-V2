@@ -326,30 +326,23 @@ label[for="versoes"] {
   border-radius: 35px;
   width: calc(100% + 15px);
   height:  calc(100% + 15px);
-  background: linear-gradient(
-    45deg, 
-    #fda543 0% 25%, #fb3640 25% 50%, #17c69b 50% 75%, #fa2f75 65% 100%
-  );
-  background-size: 400% 400%;
-  animation: animarBorda 20s linear normal infinite ;
+background: repeating-linear-gradient(120deg, #fb3640, #fb3640 10%, #17c69b 10%, #17c69b 20%, #fa2f75 20%, #fa2f75 30%, #fda543 30%, #fda543 40%);
+  background-size: 300% 300%;
+  animation: animarBorda 5s linear normal infinite ;
   }
-.borde-empresa::after {
-  filter: blur(10px);
-  opacity: 0.8; 
-}
 
-@keyframes animarBorda {
+
+@keyframes animarBorda{
   0% {
-    /* Começa no canto superior esquerdo */
     background-position: 0% 50%;
+    box-shadow: 0 0 15px 0px rgba(255, 255, 255, 0.7);
   }
-  50% {
-    /* Vai para o canto inferior direito */
-    background-position: 100% 50%;
+  50%{
+    box-shadow: 0 0 5px 0px rgba(252, 254, 255, 0.7);
   }
   100% {
-    /* Volta para o início para o loop ser infinito e suave */
-    background-position: 0% 50%;
+    background-position: 100% 50%;
+    box-shadow: 0 0 15px 0px rgba(252, 254, 255, 0.7);
   }
 }
 .flex-layout {
@@ -365,4 +358,15 @@ label[for="versoes"] {
     font-size: 1.2em;
     font-family: Biryani-regular;
     font-size: 22px;
+}
+
+/*aqui começa a parte dos jogos img*/
+.conteiner-img-jogos{
+}
+.img-jogos{
+  padding: 20px;
+  height:  350px;
+  width: 450px;
+  border-radius: 10px
+  ba
 }
