@@ -127,7 +127,7 @@ main {
   color: #ffff;
 }
 
-.featurs-conteiner {
+.conteiner {
   margin-left: 20%;
   margin-top: 60px;
   display: flex;
@@ -303,4 +303,66 @@ label[for="versoes"] {
     opacity: 3;
     transform: translateX(0);
   }
+}
+/*fdeaturs completo qause*/
+/*começando sobre a emoresa*/
+
+.borde-empresa{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #13141A;
+  display: flex;
+  width: 370px;
+  height: 150px;
+  border-radius: 25px;
+  margin-top: 20px;
+}
+
+.borde-empresa::before, .borde-empresa::after{
+  content: '';
+  position:absolute;
+  z-index: -1;
+  border-radius: 35px;
+  width: calc(100% + 15px);
+  height:  calc(100% + 15px);
+  background: linear-gradient(
+    45deg, 
+    #fda543 0% 25%, #fb3640 25% 50%, #17c69b 50% 75%, #fa2f75 65% 100%
+  );
+  background-size: 400% 400%;
+  animation: animarBorda 20s linear normal infinite ;
+  }
+.borde-empresa::after {
+  filter: blur(10px);
+  opacity: 0.8; 
+}
+
+@keyframes animarBorda {
+  0% {
+    /* Começa no canto superior esquerdo */
+    background-position: 0% 50%;
+  }
+  50% {
+    /* Vai para o canto inferior direito */
+    background-position: 100% 50%;
+  }
+  100% {
+    /* Volta para o início para o loop ser infinito e suave */
+    background-position: 0% 50%;
+  }
+}
+.flex-layout {
+    display: flex;
+    gap: 40px;           /* Cria um espaço entre a borda da imagem e o texto */
+    margin-top: 20px;
+}
+
+.texto-sobre {
+    width: 470px;
+    padding-right: 6%;
+    text-align: justify;
+    font-size: 1.2em;
+    font-family: Biryani-regular;
+    font-size: 22px;
 }
