@@ -28,6 +28,10 @@ body {
   padding: 0;
 }
 
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
 /* CABEÇALHO & MENU HAMBURGER */
 .cabecalho {
   margin-top: 20px;
@@ -158,6 +162,7 @@ p {
   width: 62vw;
   height: 3px;
   background: linear-gradient(to right, #ffff, #13141A);
+  margin-top: 0;
   margin-bottom: 20px;
 }
 
@@ -326,7 +331,7 @@ label[for="versoes"] {
   border-radius: 35px;
   width: calc(100% + 15px);
   height:  calc(100% + 15px);
-background: repeating-linear-gradient(120deg, #fb3640, #fb3640 10%, #17c69b 10%, #17c69b 20%, #fa2f75 20%, #fa2f75 30%, #fda543 30%, #fda543 40%);
+  background: repeating-linear-gradient(120deg, #fb3640, #fb3640 5%, #17c69b 10%, #17c69b 20%, #fa2f75 20%, #fa2f75 30%, #fda543 30%, #fda543 40%);
   background-size: 300% 300%;
   animation: animarBorda 5s linear normal infinite ;
   }
@@ -334,15 +339,17 @@ background: repeating-linear-gradient(120deg, #fb3640, #fb3640 10%, #17c69b 10%,
 
 @keyframes animarBorda{
   0% {
-    background-position: 0% 50%;
-    box-shadow: 0 0 15px 0px rgba(255, 255, 255, 0.7);
-  }
-  50%{
-    box-shadow: 0 0 5px 0px rgba(252, 254, 255, 0.7);
-  }
-  100% {
     background-position: 100% 50%;
-    box-shadow: 0 0 15px 0px rgba(252, 254, 255, 0.7);
+    box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.7);
+  }
+
+  50%{
+    box-shadow: none;
+  }
+
+  100% {
+    background-position: 0% 50%;
+    box-shadow: 0 0 10px 1px rgba(252, 254, 255, 0.7);
   }
 }
 .flex-layout {
@@ -362,11 +369,63 @@ background: repeating-linear-gradient(120deg, #fb3640, #fb3640 10%, #17c69b 10%,
 
 /*aqui começa a parte dos jogos img*/
 .conteiner-img-jogos{
+  gap: 40px;
+  padding-left: 40px;
+
 }
-.img-jogos{
-  padding: 20px;
-  height:  350px;
-  width: 450px;
-  border-radius: 10px
-  ba
+.img_jogos{
+  position: relative;   /* referência para o absolute */
+  width: 450px;            
+  height: 350px;           
+  border-radius: 20px;     
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+#DemoGame{
+  background-image: url(ASSETS/Jogos/DemoGame.jpg);
+}
+#DemoGame2{
+  background-image: url(ASSETS/Jogos/DemoGame2.jpg);
+}
+#DemoGameRemastered{
+  background-image: url(ASSETS/Jogos/DemoGameRemastered.jpg);
+}
+#DemoGameFinale{
+  background-image: url(ASSETS/Jogos/DemoGameFinale.jpg);
+}
+.conteiner-img-jogos p{
+  color: black; text-align: justify; padding-right: 20px;
+}
+.cont-jogo{
+  padding-left: 30px;
+  position: absolute;
+  inset: 0;              /* ocupa toda a imagem */
+  background-color:#fda543;
+  margin-top: 278px;
+  z-index: 2;
+  transition: 0.5s;
+}
+.img_jogos:hover .cont-jogo{
+    margin-top: 85px;
+}
+.btn-pt3{
+  margin-top: 40px;
+  margin-left: 42vh;
+  border-radius: 15px;
+  background-color: #fda543;
+  color: #13141A;
+  width: 180px;
+  height: 80px;
+  align-items: center;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.btn-pt3:hover{
+  background-color: #13141A;
+  border: 5px solid #fda543;
+  color: #ffff;
+  width: 185px;
+  height: 85px;
 }
