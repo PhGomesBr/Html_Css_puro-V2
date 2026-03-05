@@ -19,7 +19,9 @@
   src: url('./ASSETS/Fonts/ABeeZee/ABeeZee-Italic.ttf') format('truetype');
   font-style: italic;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body {
   background-color: #13141a;
   overflow-x: hidden;
@@ -31,6 +33,14 @@ body {
 div {
     display: block;
     unicode-bidi: isolate;
+}
+header {
+    width: 100%;
+    background-color: #13141A;
+    height: 110px;
+    position: fixed;
+    top: 0;
+    z-index: 9; /* Adiciona esta propriedade */
 }
 /* CABEÇALHO & MENU HAMBURGER */
 .cabecalho {
@@ -103,10 +113,10 @@ div {
   z-index: 999;
 }
 
-.sid-bar p {
+.sid-bar a {
   color: #ffff;
 }
-.sid-bar p:hover{
+.sid-bar a:hover{
   font-style: italic;
   cursor: pointer;
 }
@@ -126,6 +136,7 @@ div {
 
 /* MAIN */
 main {
+  margin-top: 140px;
   height: auto;
   width: 100%;
   color: #ffff;
@@ -149,7 +160,7 @@ h2 {
   unicode-bidi: isolate;
 }
 
-p {
+p, a{
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
@@ -308,6 +319,12 @@ label[for="versoes"] {
     opacity: 3;
     transform: translateX(0);
   }
+}
+/*para ficar um pouco mais baixo por causa do cabeçalho*/
+#featurs-conteiner,
+#sobre-empresa,
+#jogos-conteiner{
+  scroll-margin-top: 140px;
 }
 /*fdeaturs completo qause*/
 /*começando sobre a emoresa*/
