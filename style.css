@@ -323,7 +323,8 @@ label[for="versoes"] {
 /*para ficar um pouco mais baixo por causa do cabeçalho*/
 #featurs-conteiner,
 #sobre-empresa,
-#jogos-conteiner{
+#jogos-conteiner,
+#rankings-conteiner{
   scroll-margin-top: 140px;
 }
 /*fdeaturs completo qause*/
@@ -445,4 +446,85 @@ label[for="versoes"] {
   color: #ffff;
   width: 185px;
   height: 85px;
+}
+
+/* aqui começa o ranking */
+.image-profile-pri{
+  border-color: #13141A;
+  height: 160px;
+  width: 160px;
+}
+.image-profile{
+  border-color: #13141A;
+  height: 80px;
+  width: 80px;
+}
+table{
+  background-color: #17c69b;
+  border-radius: 30px;
+  width: 70vw;
+}
+thead th{
+  padding: 10px;
+  font-size: 20px;
+}
+.conteudo-table{
+  justify-content: center;
+  text-align: center;
+}
+.name{
+  margin-left: 30px;
+  margin-top: 32px;
+}
+#pos{
+  font-size: 25px;
+  color: #17c69b;
+}
+th{
+  color: #13141A;
+}
+.cabecalho-table{
+  width: 8vw;
+}
+tbody tr{
+  background-color: #13141A;
+  color: white;
+}
+
+.jogador{
+  display: flex;
+}
+.jogador img {
+  background-color: #ffff;
+}
+
+.ranking-v {
+  display: none; /*para esconder a bolinha do radio*/
+}
+/* Quando a linha (tr) TIVER um input marcado dentro dela... */
+tr:has(.ranking-v:checked) {
+    background-color: #17c69b; /* Cor de fundo verde */
+    color: #13141A;           /* Cor do texto escura */
+}
+
+/* Ajuste para o texto do número da posição mudar de cor também */
+tr:has(.ranking-v:checked) #pos {
+    color: #13141A;
+}
+
+td{
+  border: 2px solid #13141A;
+}
+/* Estilo para o label cobrir a linha toda e permitir o clique */
+.linha-ranking {
+    position: relative;
+}
+
+.click-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
 }
