@@ -170,7 +170,7 @@ p, a{
 }
 
 .horizontal {
-  width: 62vw;
+  width: 70vw;
   height: 3px;
   background: linear-gradient(to right, #ffff, #13141A);
   margin-top: 0;
@@ -438,14 +438,13 @@ label[for="versoes"] {
   align-items: center;
   font-size: 17px;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.6s;
 }
 .btn-pt3:hover{
   background-color: #13141A;
-  border: 5px solid #fda543;
+  border: 3px solid #fda543;
   color: #ffff;
-  width: 185px;
-  height: 85px;
+  transform: scale(1.1);
 }
 
 /* aqui começa o ranking */
@@ -527,4 +526,154 @@ td{
     width: 100%;
     height: 100%;
     cursor: pointer;
+}
+/* aqui copmeça a parte do perfil*/
+.conteiner-perfil{
+  display: flex;
+}
+.text-perfil{
+    width: 14.5%;
+    line-height: 1.7;
+    padding-right: 2%;
+}
+.profile {
+  display: flex;
+  justify-content: space-between; /* Empurra o gráfico para o canto direito */
+  align-items: flex-start; /* Alinha o gráfico por baixo, combinando com o design */
+  align-items: center;
+  width: 53vw;
+  border: 2px solid #fb3640;
+  border-radius: 20px;
+  padding: 15px;
+  color: white;
+}
+/* Alinha a imagem com o bloco de texto */
+.profile-header {
+  display: flex;
+  align-items: center; 
+  gap: 15px; /* Espaço entre a galinha e o texto */
+  margin-bottom: 10px;
+}
+
+/* Deixa o "User" e o "nick" na mesma linha */
+.name-row {
+  display: flex;
+  align-items: baseline;
+}
+
+.user-data h3, .user-data h4 {
+  margin: 0; /* Remove as margens padrão que empurram os itens */
+  font-size: 20px;
+}
+
+.profile-header img{
+  border-radius: 50%;
+  height: 150px;
+}
+.pontos {
+  font-size: 0.9rem;
+  margin-top: 5px !important;
+}
+
+.dividir {
+  margin-top: -12px;
+  height: 1px;
+  background-color: #777777;
+  width: 14vw;
+}
+
+.rankings p {
+  margin: 12px 0;
+  font-size: 18px;
+  color: #ffffff;
+}
+.grafico {
+  display: flex;
+  align-items: center; /* Alinha as barras pelo centro (vertical) */
+  gap: 8px;            /* Espaço entre as barrinhas */
+  height: 200px;       /* Altura máxima que o gráfico pode ter */
+  padding: 20px;
+}
+
+.profile-bar {
+  width: 1px;          /* Largura de cada barrinha */
+  height: 1px;
+  background-color: #fb3640; /* Cor vermelha da imagem */
+  border-radius: 10px; /* Deixa as pontas arredondadas */
+  transform-origin: center; /* aqui é a mudança */
+  animation: ampulheta 7s infinite ease-in-out;
+}
+
+#bar1 { animation-delay: 0s; }
+#bar2 { animation-delay: 0.5s; }
+#bar3 { animation-delay: 1s; }
+#bar4 { animation-delay: 1.5s; }
+#bar5 { animation-delay: 2s; }
+#bar6 { animation-delay: 2.5s; }
+#bar7 { animation-delay: 3s; }
+#bar8 { animation-delay: 3.5s; }
+
+@keyframes ampulheta{
+  0%{
+    transform: scaleY(40);
+  }
+  50%{
+    transform: scaleY(300);
+  }
+  100%{
+    transform: scaleY(40);
+  }
+}
+
+.chart{
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #17c69b 0% 50%,
+    #fa2f75 50% 72%,
+    #fda543 72% 100%
+  );
+  margin-left: 10px;
+  animation: rodar 15s linear infinite;
+}
+
+@keyframes rodar {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.estatistica{
+  display: flex;
+  align-items: center;
+}
+.genero{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.genero div{
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.color{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+}
+#color1{
+  background: #17c69b;
+}
+#color2{
+  background: #fda543;
+}
+#color3{
+  background: #fa2f75;
 }
