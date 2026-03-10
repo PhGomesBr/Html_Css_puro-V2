@@ -44,7 +44,7 @@ header {
 }
 a{
   cursor: pointer;
-text-decoration: none;
+  text-decoration: none;
 }
 /* CABEÇALHO & MENU HAMBURGER */
 .cabecalho {
@@ -716,17 +716,22 @@ td{
   transform: scale(1.25);
   box-shadow: 0 0 15px 7px rgba(255, 255, 255, 0.6);
 }
+.div {
+  height: 480px;
+  width: 68vw;
+  border: 2px solid #fa2f75;
+  border-radius: 15px;
+  margin: 40px 0;
+  overflow: hidden; /* esse coisa aquin faz a tabela n vazar */
+  position: relative; /* Garante que o alinhamento interno seja respeitado */
+}
 
-.cont-table{
-    display: none;
-    width: 86%;
-    margin-bottom: 10%;
-    border-spacing: 0;
-    border: 2px solid #fa2f75;
-    border-radius: 12px;
-    overflow: hidden;
-    height: auto;
-    margin-top: 50px;
+.cont-table {
+  display: none; 
+  width: 100%;   
+  height: auto;
+  border-collapse: collapse;
+  border: none; 
 }
 .cab-version{
   background-color: #fa2f75;
