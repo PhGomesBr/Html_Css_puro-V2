@@ -42,6 +42,10 @@ header {
     top: 0;
     z-index: 9; /* Adiciona esta propriedade */
 }
+a{
+  cursor: pointer;
+text-decoration: none;
+}
 /* CABEÇALHO & MENU HAMBURGER */
 .cabecalho {
   margin-top: 20px;
@@ -324,7 +328,9 @@ label[for="versoes"] {
 #featurs-conteiner,
 #sobre-empresa,
 #jogos-conteiner,
-#rankings-conteiner{
+#rankings-conteiner,
+#perfil-conteiner,
+#versoes-conteiner{
   scroll-margin-top: 140px;
 }
 /*fdeaturs completo qause*/
@@ -458,7 +464,7 @@ label[for="versoes"] {
   height: 80px;
   width: 80px;
 }
-table{
+.table-ranking{
   background-color: #17c69b;
   border-radius: 30px;
   width: 70vw;
@@ -676,4 +682,103 @@ td{
 }
 #color3{
   background: #fa2f75;
+}
+
+/*aqui começa a parte das versões*/
+.label-versoes{
+  display: flex;
+  gap: 40px;
+  margin-top: 50px;
+  align-items: center;
+}
+#jogo1, #jogo2, #jogo3, #jogo4{
+  display: none;
+}
+.img-versoes{
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  opacity: 0.7;
+  transition: 0.1s ease;
+  object-fit: cover; /* Garante que a imagem preencha o quadrado sem esticar */
+  cursor: pointer;
+}
+.img-versoes:hover {
+  opacity: 1;           /* Fica clarinho ao passar o mouse */
+  transform: scale(1.1); 
+  cursor: pointer;
+}
+#jogo1:checked ~ .label-versoes label[for="jogo1"] img,
+#jogo2:checked ~ .label-versoes label[for="jogo2"] img,
+#jogo3:checked ~ .label-versoes label[for="jogo3"] img,
+#jogo4:checked ~ .label-versoes label[for="jogo4"] img {
+  opacity: 1;
+  transform: scale(1.25);
+  box-shadow: 0 0 15px 7px rgba(255, 255, 255, 0.6);
+}
+
+.cont-table{
+    display: none;
+    width: 86%;
+    margin-bottom: 10%;
+    border-spacing: 0;
+    border: 2px solid #fa2f75;
+    border-radius: 12px;
+    overflow: hidden;
+    height: auto;
+    margin-top: 50px;
+}
+.cab-version{
+  background-color: #fa2f75;
+}
+.version-itens td{
+  font-weight: bold; 
+  border: none;
+  line-height: 40px;
+  padding-top: 10px;
+}
+.version-number{
+    width: 5%;
+    padding: 0px;
+    font-size: 0.8em;
+    padding-left: 20px;
+}
+.version-data{
+    width: 0.1%;
+    padding: 0px;
+    font-size: 0.8em;
+}
+.title-game{
+    color:  #13141A;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.dotted-line {
+    color: #fa2f75;
+}
+
+#jogo1:checked ~ .cont-version #cont-jogo1,
+#jogo2:checked ~ .cont-version #cont-jogo2,
+#jogo3:checked ~ .cont-version #cont-jogo3,
+#jogo4:checked ~ .cont-version #cont-jogo4{
+  display: table;
+}
+
+/*aqui começa o rodapé*/
+.rodape{
+  text-align: center;
+  display: flex;
+  color: #ffff;
+  justify-content: space-between;
+  margin-left: 400px;
+  margin-right: 400px;
+  height: 70px;
+}
+.rodape p{
+  margin-top: 30px;
+}
+.rodape span{
+  margin: 10px;
+  border: 1px solid #ffff;
 }
