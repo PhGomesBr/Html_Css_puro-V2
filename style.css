@@ -855,3 +855,417 @@ td{
   margin: 10px;
   border: 1px solid #ffff;
 }
+
+/* ============================================ */
+/*         RESPONSIVIDADE - MEDIA QUERIES       */
+/* ============================================ */
+
+/* ---- TABLET (até 1024px) ---- */
+@media (max-width: 1024px) {
+
+  /* Header */
+  .cabecalho {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  /* Container principal */
+  .conteiner {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  /* Features - caixa de conteúdo */
+  .conteudo {
+    width: 85vw;
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+    .vertical{
+    width: 200vh;
+  }
+
+  .feature-image {
+    width: 100%;
+    height: 220px;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .feature-text {
+    margin: 20px;
+  }
+
+  /* Linha horizontal */
+  .horizontal {
+    width: 85vw;
+  }
+
+  /* Sobre a empresa */
+  .flex-layout {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .texto-sobre {
+    width: 100%;
+    font-size: 18px;
+    padding-right: 0;
+  }
+
+  /* Jogos */
+  .conteiner-img-jogos {
+    padding-left: 0;
+  }
+
+  .img_jogos {
+    width: 100%;
+    max-width: 380px;
+    height: 300px;
+  }
+
+  /* Rankings */
+  .table-ranking {
+    width: 90vw;
+  }
+
+  .cabecalho-table {
+    width: auto;
+  }
+
+  /* Perfil */
+  .profile {
+    width: 80vw;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .text-perfil {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  /* Versões */
+  .div {
+    width: 85vw;
+    height: auto;
+    min-height: 300px;
+  }
+
+  /* Rodapé */
+  .rodape {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  /* Sidebar */
+  .sid-bar {
+    width: 50vw;
+  }
+}
+
+/* ---- MOBILE (até 768px) ---- */
+@media (max-width: 768px) {
+
+  /* Header menor */
+  header {
+    height: 80px;
+  }
+
+  .cabecalho {
+    margin-top: 10px;
+    margin-left: 4vw;
+    margin-right: 4vw;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .menu-burger div {
+    width: 5vh;
+  }
+
+  /* Ajuste do main para o header menor */
+  main {
+    margin-top: 100px;
+  }
+
+  #featurs-conteiner,
+  #sobre-empresa,
+  #jogos-conteiner,
+  #rankings-conteiner,
+  #perfil-conteiner,
+  #versoes-conteiner {
+    scroll-margin-top: 100px;
+  }
+
+  /* Seção Features */
+  .featurs {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+    .vertical{
+    width: 200vh;
+  }
+
+  .featurs label {
+    width: 100px;
+    height: 24px;
+    font-size: medium;
+  }
+
+  .conteudo {
+    width: 90vw;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .feature-image {
+    width: 100%;
+    height: 180px;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .feature-text {
+    margin: 15px;
+  }
+
+  .feature-text p {
+    font-size: 14px;
+  }
+
+  .horizontal {
+    width: 90vw;
+  }
+
+  /* Sobre a empresa */
+  .borde-empresa {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .texto-sobre {
+    font-size: 16px;
+  }
+
+  /* Jogos - empilha os cards em coluna */
+  .conteiner-img-jogos > div[style] {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .img_jogos {
+    width: 100%;
+    max-width: 100%;
+    height: 260px;
+  }
+
+  .cont-jogo {
+    margin-top: 185px;
+    padding-left: 15px;
+  }
+
+  .img_jogos:hover .cont-jogo {
+    margin-top: 60px;
+  }
+
+  .btn-pt3 {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 160px;
+    height: 60px;
+  }
+
+  /* Rankings - scroll horizontal na tabela */
+  .table-ranking {
+    width: 90vw;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .image-profile-pri {
+    height: 80px;
+    width: 80px;
+  }
+
+  .image-profile {
+    height: 50px;
+    width: 50px;
+  }
+
+  .name {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+
+  thead th {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  /* Perfil */
+  .conteiner-perfil {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .text-perfil {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .profile {
+    width: 90vw;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .profile-header img {
+    height: 100px;
+  }
+
+  .dividir {
+    width: 60vw;
+  }
+
+  .grafico {
+    height: 150px;
+    padding: 10px;
+  }
+
+  .chart {
+    height: 130px;
+    width: 130px;
+  }
+
+  .estatistica {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* Versões */
+  .label-versoes {
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+
+  .img-versoes {
+    width: 70px;
+    height: 70px;
+  }
+
+  .div {
+    width: 90vw;
+    height: auto;
+    min-height: 250px;
+  }
+
+  /* Tabela de versões - scroll horizontal */
+  .cont-version {
+    overflow-x: auto;
+  }
+
+  .cont-table {
+    min-width: 300px;
+  }
+
+  .dotted-line {
+    display: none;
+  }
+
+  /* Sidebar mobile - largura full */
+  .sid-bar {
+    width: 75vw;
+  }
+
+  /* Rodapé */
+  .rodape {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: auto;
+    gap: 5px;
+    padding-bottom: 20px;
+  }
+
+  .rodape p {
+    margin-top: 10px;
+    font-size: 13px;
+  }
+
+  .rodape span {
+    display: none;
+  }
+}
+
+/* ---- MOBILE PEQUENO (até 480px) ---- */
+@media (max-width: 480px) {
+
+  .cabecalho {
+    margin-left: 3vw;
+    margin-right: 3vw;
+  }
+
+  .conteiner {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  .vertical{
+    width: 200vh;
+  }
+
+  h2[style] {
+    font-size: 28px !important;
+  }
+
+  .featurs label {
+    width: 80px;
+    height: 22px;
+    font-size: small;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+  }
+
+  .feature-image {
+    height: 150px;
+  }
+
+  .borde-empresa {
+    max-width: 100%;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-header img {
+    height: 80px;
+  }
+
+  .img-versoes {
+    width: 55px;
+    height: 55px;
+  }
+
+  .label-versoes {
+    gap: 12px;
+  }
+
+  .sid-bar {
+    width: 29vw;
+  }
+
+  .user-data h3, .user-data h4 {
+    font-size: 16px;
+  }
+}
