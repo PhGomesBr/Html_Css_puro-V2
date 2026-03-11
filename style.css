@@ -324,7 +324,7 @@ label[for="versoes"] {
     transform: translateX(0);
   }
 }
-/*para ficar um pouco mais baixo por causa do cabeçalho*/
+/*para quando clicar ficvar certinha e o nome n ficar escondido*/
 #featurs-conteiner,
 #sobre-empresa,
 #jogos-conteiner,
@@ -333,6 +333,74 @@ label[for="versoes"] {
 #versoes-conteiner{
   scroll-margin-top: 140px;
 }
+/* ============================================ */
+/* EFEITO DE ANIMAÇÃO DAS LETRAS (CORRIGIDO) */
+/* ============================================ */
+
+/* 1. Estilo base para cada letra */
+.letra {
+    display: inline-block;
+     opacity: 1; /* Começa invisível */
+     font-style: 'Fugaz One';
+     font-weight: bold;
+}
+
+/* 2. A Animação */
+@keyframes entrar {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* 3. SÓ ANIMA QUANDO O RADIO ESTIVER CHECKED */
+#jogos:checked ~ .featurs label[for="jogos"] .letra,
+#rankings:checked ~ .featurs label[for="rankings"] .letra,
+#perfil:checked ~ .featurs label[for="perfil"] .letra,
+#versoes:checked ~ .featurs label[for="versoes"] .letra {
+    opacity: 0;
+    animation: entrar 0s ease-out forwards;
+}
+
+/* 4. ATRASOS PARA CADA RADIO (ESPECÍFICOS) */
+
+/* JOGOS (5 letras) */
+#jogos:checked ~ .featurs label[for="jogos"] .letra:nth-child(1) { animation-delay: 0.1s; }
+#jogos:checked ~ .featurs label[for="jogos"] .letra:nth-child(2) { animation-delay: 0.2s; }
+#jogos:checked ~ .featurs label[for="jogos"] .letra:nth-child(3) { animation-delay: 0.3s; }
+#jogos:checked ~ .featurs label[for="jogos"] .letra:nth-child(4) { animation-delay: 0.4s; }
+#jogos:checked ~ .featurs label[for="jogos"] .letra:nth-child(5) { animation-delay: 0.5s; }
+
+/* RANKINGS (8 letras) */
+#rankings:checked ~ .featurs label[for="rankings"] .letra:nth-child(1) { animation-delay: 0.1s; }
+#rankings:checked ~ .featurs label[for="rankings"] .letra:nth-child(2) { animation-delay: 0.2s; }
+#rankings:checked ~ .featurs label[for="rankings"] .letra:nth-child(3) { animation-delay: 0.3s; }
+#rankings:checked ~ .featurs label[for="rankings"] .letra:nth-child(4) { animation-delay: 0.4s; }
+#rankings:checked ~ .featurs label[for="rankings"] .letra:nth-child(5) { animation-delay: 0.5s; }
+#rankings:checked ~ .featurs label[for="rankings"] .letra:nth-child(6) { animation-delay: 0.6s; }
+#rankings:checked ~ .featurs label[for="rankings"] .letra:nth-child(7) { animation-delay: 0.7s; }
+#rankings:checked ~ .featurs label[for="rankings"] .letra:nth-child(8) { animation-delay: 0.8s; }
+
+/* PERFIL (6 letras) */
+#perfil:checked ~ .featurs label[for="perfil"] .letra:nth-child(1) { animation-delay: 0.1s; }
+#perfil:checked ~ .featurs label[for="perfil"] .letra:nth-child(2) { animation-delay: 0.2s; }
+#perfil:checked ~ .featurs label[for="perfil"] .letra:nth-child(3) { animation-delay: 0.3s; }
+#perfil:checked ~ .featurs label[for="perfil"] .letra:nth-child(4) { animation-delay: 0.4s; }
+#perfil:checked ~ .featurs label[for="perfil"] .letra:nth-child(5) { animation-delay: 0.5s; }
+#perfil:checked ~ .featurs label[for="perfil"] .letra:nth-child(6) { animation-delay: 0.6s; }
+
+/* VERSÕES (7 letras) */
+#versoes:checked ~ .featurs label[for="versoes"] .letra:nth-child(1) { animation-delay: 0.1s; }
+#versoes:checked ~ .featurs label[for="versoes"] .letra:nth-child(2) { animation-delay: 0.2s; }
+#versoes:checked ~ .featurs label[for="versoes"] .letra:nth-child(3) { animation-delay: 0.3s; }
+#versoes:checked ~ .featurs label[for="versoes"] .letra:nth-child(4) { animation-delay: 0.4s; }
+#versoes:checked ~ .featurs label[for="versoes"] .letra:nth-child(5) { animation-delay: 0.5s; }
+#versoes:checked ~ .featurs label[for="versoes"] .letra:nth-child(6) { animation-delay: 0.6s; }
+#versoes:checked ~ .featurs label[for="versoes"] .letra:nth-child(7) { animation-delay: 0.7s; }
 /*fdeaturs completo qause*/
 /*começando sobre a emoresa*/
 
